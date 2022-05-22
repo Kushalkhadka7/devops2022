@@ -1,0 +1,18 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "node js demo application",
+  "main": "index.js",
+  "author": "kushal khadka",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "express": "^4.18.1",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node dist",
+    "build": "rimraf dist && babel src --copy-files --out-dir dist --source-maps"
+  }
+}
