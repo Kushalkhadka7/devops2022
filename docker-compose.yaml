@@ -2,11 +2,19 @@ version: '3.4'
 
 services:
   node-app:
+    container_name: node-app
     image: crkushal7/node:1.0.0
     ports:
       - '5000:5000'
+    volumes:
+      - ./node-app:/app/node-app
+      - ./app/node-app/node_modules
 
   react-app:
+    container_name: react-app
     image: crkushal7/react-app:1.0.0
     ports:
       - '3000:3000'
+    volumes:
+      - ./react-app:/app/react-app
+      - ./app/react-app/node_modules
